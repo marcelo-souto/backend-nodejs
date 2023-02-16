@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-body, ul, li, p, h1, h2, h3 {
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,38 +21,64 @@ body {
   display: flex;
   align-items: center;
   min-height: 100vh;
+  background: #16202a;
 }
 
 .title {
   grid-column: 1 / -1;
   align-self: end;
+  color: #dae1eb;
+  font-weight: 600;
 }
 
 .containerList {
-  background-color: #f5f5f5;
+  background-color: #1b2939;
   padding: 32px 48px;
   border-radius: 16px;
+  max-width: max-content;
 }
 
 .containerList ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  color: #bfc6ce;
 }
 
 .containerList > a {
-  display: block;
-  font-weight: 500;
+  display: flex;
+  background: linear-gradient(to right, #95D75C, #50db67);
+  padding: 12px 16px 12px 24px;
   margin-bottom: 16px;
+  font-size: 1rem;
+  border-radius: 6px;
+  color: #16202a;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerList a::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  display: flex;
+  background: url('../img/arrow.svg') no-repeat center right;
+  background-size: contain;
+}
+
+.containerList > h3 {
   font-size: 1.5rem;
-  color: #131313;
+  margin-bottom: 32px;
   text-transform: capitalize;
+  color: #dae1eb;
 }
 
 .content {
   display: grid;
   align-items: center;
-  max-width: 860px;
   margin: 0 auto;
   gap: 24px;
   grid-template-columns: 1fr 1fr;
