@@ -24,8 +24,16 @@ paths.forEach((path) => {
 
     routes.forEach(({ method, route }) => {
       const lisItem = document.createElement('li')
+      const listMethod = document.createElement('span')
+      listMethod.innerText = method.toUpperCase()
+      const listLink = document.createElement('p')
+      
 
-      lisItem.innerText = `${method.toUpperCase()}: ${url}/${path}${route === '/' ? '' : route}`
+      listLink.innerText = `: ${url}/${path}${route === '/' ? '' : route}`
+      
+
+      lisItem.append(listMethod)
+      lisItem.append(listLink)
       list.append(lisItem);
     })
 
