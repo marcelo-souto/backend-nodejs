@@ -2,6 +2,7 @@ const Product = require('../models/Product.js');
 const Category = require('../models/Category.js');
 const validate = require('../functions/validate.js');
 
+
 const categoryController = {
   getAll: async (req, res) => {
     try {
