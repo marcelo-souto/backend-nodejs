@@ -40,7 +40,9 @@ const productController = {
     }
   },
   create: async (req, res) => {
-    const { name, description, categoryId, price } = req.body;
+    let { name, description, categoryId, price } = req.body;
+
+    if (price && typeof price === 'number') price = price.toFixed(2);
 
     try {
       validate({ nome: name, isRequired: true });
@@ -68,6 +70,8 @@ const productController = {
         return res
           .status(404)
           .json({ error: `O produto com id ${id} não foi encontrado` });
+
+      if (price && typeof price === 'number') price = price.toFixed(2);
 
       validate({ nome: name });
       validate({ descricao: description });

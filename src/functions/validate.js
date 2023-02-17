@@ -10,7 +10,7 @@ const types = {
       'A senha precisa ter 1 caractere maiúsculo, 1 minúsculo e 1 digito. Com no mínimo 8 caracteres',
   },
   money: {
-    regex: /^[1-9]\d{0,2}(\.\d{3})*\.\d{2}$/,
+    regex: /^[0-9]\d{0,2}(\.\d{3})*\.\d{2}$/,
     message: 'Utilize apenas numeros que sigam padrão monetario',
   },
   number: {
