@@ -25,18 +25,18 @@ Para criação e manipulação do banco de dados utilizamos o ORM Sequelize e de
 
 campo | tipo
 ------ | -------
-id |INTEGER
+id |INTEGER (PK)
 name | STRING
 description | TEXT
 price | DECIMAL
-categoryId | INTEGER (PK)
+categoryId | INTEGER (FK)
 
 
 ### Category
 
 campo | tipo
 ------ | -------
-id |INTEGER
+id |INTEGER (PK)
 name | STRING
 
 ## Rotas
